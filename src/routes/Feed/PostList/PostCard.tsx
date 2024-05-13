@@ -36,14 +36,6 @@ const PostCard: React.FC<Props> = ({ data }) => {
           <header className="top">
             <h2>{data.title}</h2>
           </header>
-          <div className="date">
-            <div className="content">
-              {formatDate(
-                data?.date?.start_date || data.createdTime,
-                CONFIG.lang
-              )}
-            </div>
-          </div>
           <div className="summary">
             <p>{data.summary}</p>
           </div>

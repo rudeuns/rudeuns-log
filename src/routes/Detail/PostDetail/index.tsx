@@ -65,9 +65,9 @@ const StyledWrapper = styled.div`
 `
 
 const StyledWrapper2 = styled.div`
-  margin-bottom: "0.5rem"
   display: flex;
   justify-content: space-between;
+  margin-bottom: "0.5rem"
   font-weight: 500;
   color: ${({ theme }) => theme.colors.gray10};
   a {

@@ -45,7 +45,7 @@ const Category: React.FC<Props> = ({ readOnly = false, children }) => {
 export default Category
 
 const StyledWrapper = styled.div`
-  margin-bottom: 0.5rem;
+  margin-bottom: 1.0rem;
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
   padding-left: 0.5rem;

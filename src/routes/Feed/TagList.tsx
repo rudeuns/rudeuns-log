@@ -38,6 +38,7 @@ const TagList: React.FC<Props> = () => {
         Tags
       </div>
       <div className="list">
+        <a onClick={() => router.push("/")}>All</a>
         {Object.keys(data).map((key) => (
           <a
             key={key}

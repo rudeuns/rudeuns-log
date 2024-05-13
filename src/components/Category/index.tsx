@@ -7,8 +7,8 @@ import { colors } from "src/styles"
 export const getColorClassByName = (name: string): string => {
   try {
     const length = name.length;
-    const colorKey = length % 16;
-    return COLOR_SET[colorKey.toString().toUpperCase()];
+    const colorKey = length % 10;
+    return COLOR_SET[colorKey.toString()];
   } catch {
     return COLOR_SET[0]
   }

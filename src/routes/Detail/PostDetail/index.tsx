@@ -22,12 +22,12 @@ const PostDetail: React.FC<Props> = () => {
     <StyledWrapper>
       <article>
         {category && (
-          <StyleWrapper2>
+          <StyledWrapper2>
             <Category readOnly={data.status?.[0] === "PublicOnDetail"}>
               {category}
             </Category>
-            <a onClick={() => router.push("/")}>✖️</a>
-          </StyleWrapper2>
+            <a onClick={() => router.push("/")}>X</a>
+          </StyledWrapper2>
         )}
         {data.type[0] === "Post" && <PostHeader data={data} />}
         <div>
@@ -64,15 +64,17 @@ const StyledWrapper = styled.div`
   }
 `
 
-const StyleWrapper2 = styled.div`
-  marginBottom: "0.5rem"
+const StyledWrapper2 = styled.div`
+  margin-bottom: "0.5rem"
   display: flex;
   justify-content: space-between;
+  font-weight: 500;
+  color: ${({ theme }) => theme.colors.gray10};
   a {
     cursor: pointer;
 
     :hover {
-      background-color: ${({ theme }) => theme.colors.gray4};
+      color: ${({ theme }) => theme.colors.gray12};
     }
   }
 `

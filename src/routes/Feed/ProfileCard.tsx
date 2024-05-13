@@ -32,6 +32,7 @@ const StyledWrapper = styled.div`
   > .title {
     padding: 0.25rem;
     margin-bottom: 0.75rem;
+    font-weight: 500;
   }
   > .content {
     margin-bottom: 2.25rem;

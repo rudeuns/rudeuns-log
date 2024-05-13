@@ -2,7 +2,7 @@ const CONFIG = {
   // profile setting (required)
   profile: {
     name: "kyungeun",
-    image: "/avatar.svg", // If you want to create your own notion avatar, check out https://notion-avatar.vercel.app
+    image: "/IMG_9174.png", // If you want to create your own notion avatar, check out https://notion-avatar.vercel.app
     role: "AI Software Developer",
     bio: "",
     email: "rudens@gmail.com",
@@ -57,7 +57,7 @@ const CONFIG = {
     config: {
       repo: process.env.NEXT_PUBLIC_UTTERANCES_REPO || "",
       "issue-term": "og:title",
-      label: "💬 Utterances",
+      label: "Utterances",
     },
   },
   cusdis: {

@@ -26,7 +26,7 @@ const PostDetail: React.FC<Props> = () => {
             <Category readOnly={data.status?.[0] === "PublicOnDetail"}>
               {category}
             </Category>
-            <a onClick={() => router.push("/")}>X</a>
+            <a onClick={() => router.push("/")}>← Back</a>
           </StyledWrapper2>
         )}
         {data.type[0] === "Post" && <PostHeader data={data} />}

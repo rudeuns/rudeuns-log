@@ -39,6 +39,14 @@ const PostCard: React.FC<Props> = ({ data }) => {
           <div className="summary">
             <p>{data.summary}</p>
           </div>
+          <div className="date">
+            <div className="content">
+              {formatDate(
+                data?.date?.start_date || data.createdTime,
+                CONFIG.lang
+              )}
+            </div>
+          </div>
           <div className="tags">
             {data.tags &&
               data.tags.map((tag: string, idx: number) => (
@@ -137,10 +145,10 @@ const StyledWrapper = styled(Link)`
         }
       }
       > .summary {
-        margin-bottom: 1rem;
+        margin-bottom: 1.0rem;
         p {
           display: none;
-          line-height: 2rem;
+          line-height: 1rem;
           color: ${({ theme }) => theme.colors.gray11};
 
           @media (min-width: 768px) {

@@ -17,21 +17,6 @@ const PostHeader: React.FC<Props> = ({ data }) => {
       {data.type[0] !== "Paper" && (
         <nav>
           <div className="top">
-            {data.author && data.author[0] && data.author[0].name && (
-              <>
-                <div className="author">
-                  <Image
-                    css={{ borderRadius: "50%" }}
-                    src={data.author[0].profile_photo || CONFIG.profile.image}
-                    alt="profile_photo"
-                    width={24}
-                    height={24}
-                  />
-                  <div className="">{data.author[0].name}</div>
-                </div>
-                <div className="hr"></div>
-              </>
-            )}
             <div className="date">
               {formatDate(
                 data?.date?.start_date || data.createdTime,
@@ -80,18 +65,6 @@ const StyledWrapper = styled.div`
       margin-bottom: 0.75rem;
       gap: 0.75rem;
       align-items: center;
-      .author {
-        display: flex;
-        gap: 0.5rem;
-        align-items: center;
-      }
-      .hr {
-        margin-top: 0.25rem;
-        margin-bottom: 0.25rem;
-        align-self: stretch;
-        width: 1px;
-        background-color: ${({ theme }) => theme.colors.gray10};
-      }
       .date {
         margin-right: 0.5rem;
 

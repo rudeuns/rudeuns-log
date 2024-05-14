@@ -15,7 +15,7 @@ const PostList: React.FC<Props> = ({ q }) => {
 
   const currentTag = `${router.query.tag || ``}` || undefined
   const currentCategory = `${router.query.category || ``}` || DEFAULT_CATEGORY
-  const currentOrder = `${router.query.order || ``}` || "desc"
+  const currentOrder = `${router.query.order || ``}` || "newest"
 
   useEffect(() => {
     setFilteredPosts(() => {
@@ -42,8 +42,13 @@ const PostList: React.FC<Props> = ({ q }) => {
         )
       }
       // order
-      if (currentOrder !== "desc") {
+      if (currentOrder === "oldest") {
         newFilteredPosts = newFilteredPosts.reverse()
+      }
+      else if (currentOrder === "name") {
+        newFilteredPosts = newFilteredPosts.sort((a, b) => {
+          return a.title.localeCompare(b.title)
+        })
       }
 
       return newFilteredPosts

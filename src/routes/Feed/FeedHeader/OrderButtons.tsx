@@ -30,12 +30,13 @@ const OrderButtons: React.FC<Props> = () => {
       </div>
       {opened && (
         <div className="content">
-          {orderOptions.map((option) => (
+          {orderOptions.map((key, idx) => (
             <div
               className="item"
-              onClick={() => handleClickOrderBy(option)}
+              key={idx}
+              onClick={() => handleClickOrderBy(key)}
             >
-              {option}
+              {key}
             </div>
           ))}
         </div>
